@@ -49,3 +49,19 @@ document.getElementById("clear").addEventListener("click", function () {
   salida.textContent = "0";
   sub_salida.textContent = "";
 });
+
+
+// Theme switcher
+const themeText = document.getElementById("theme-text");
+const checkbox = document.getElementById("checkbox");
+const body = document.body;
+
+checkbox.addEventListener("change", () => {
+    body.classList.toggle("light-mode");
+    if (body.classList.contains("light-mode")) {
+        themeText.textContent = "Light Mode";
+    } else {
+        themeText.textContent = "Dark Mode";
+        
+    }
+});
